@@ -26,13 +26,19 @@
     "url": "https://github.com/rustwasm/create-wasm-app/issues"
   },
   "homepage": "https://github.com/rustwasm/create-wasm-app#readme",
+  "config": {
+    "ghooks": {
+      "pre-push": "git subtree push --prefix www/dist origin gh-pages"
+    }
+  },
   "dependencies": {
     "wasm-game-of-life": "file:../pkg"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^5.0.0",
+    "ghooks": "^2.0.4",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5",
-    "copy-webpack-plugin": "^5.0.0"
+    "webpack-dev-server": "^3.1.5"
   }
 }

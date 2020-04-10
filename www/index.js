@@ -1,6 +1,6 @@
 import { Universe } from "wasm-game-of-life";
 import { memory } from "wasm-game-of-life/wasm_game_of_life_bg";
-// import { fps } from "./src/profiling";
+import { fps } from "./src/profiling";
 
 const CELL_SIZE = 5;
 const GRID_COLOR = "#CCCCCC";
@@ -44,7 +44,7 @@ const startTicking = () => {
 
 let animationId = null;
 const renderLoop = () => {
-  // fps.render();
+  fps.render();
 
   if (tickAwaitingRender) {
     drawGrid();

@@ -21,6 +21,23 @@
       #fps {
         white-space: pre;
         font-family: monospace;
+        float: right;
+      }
+      #instructions-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      #canvas-wrapper {
+        position: relative;
+      }
+      p {
+        margin: 1px;
+      }
+      kbd {
+        border: solid 1px #ccc;
+        border-radius: 3px;
+        padding: 2px;
       }
     </style>
   </head>
@@ -35,10 +52,22 @@
       <button id="seed">Seed</button>
     </div>
     <div>
-      <input id="speed-input" type="range" min="0" max="1000" />
+      <input id="speed-input" type="range" min="0" max="1000" value="1000" />
     </div>
-    <canvas id="game-of-life-canvas"></canvas>
-    <div id="fps"></div>
+
+    <div id="canvas-wrapper">
+      <canvas id="game-of-life-canvas"></canvas>
+
+      <div id="instructions-wrapper">
+        <div id="controls">
+          <p><kbd>Click</kbd> to toggle a cell.</p>
+          <p><kbd>Cmd + Click</kbd> to add a glider.</p>
+          <p><kbd>Shift + Click</kbd> to add a pulsar.</p>
+        </div>
+        <div id="fps"></div>
+      </div>
+    </div>
+
     <script src="./bootstrap.js"></script>
   </body>
 </html>
