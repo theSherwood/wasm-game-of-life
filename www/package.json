@@ -28,7 +28,7 @@
   "homepage": "https://github.com/rustwasm/create-wasm-app#readme",
   "config": {
     "ghooks": {
-      "post-receive": "git subtree push --prefix www/dist origin gh-pages"
+      "post-commit": "git subtree push --prefix www/dist origin gh-pages"
     }
   },
   "dependencies": {
